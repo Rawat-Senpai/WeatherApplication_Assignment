@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#DDB130"/> <!-- Background color -->
+
+    <corners android:topLeftRadius="80dp"
+        android:topRightRadius="80dp"
+        android:bottomLeftRadius="80dp"
+        android:bottomRightRadius="80dp"/> <!-- Adjust the radii for the desired curve -->
+
+    <padding android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp"/> <!-- Padding inside the shape -->
+
+  <!-- Size of the shape, optional -->
+</shape>
