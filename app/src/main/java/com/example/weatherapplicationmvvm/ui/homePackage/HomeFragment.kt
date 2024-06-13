@@ -26,6 +26,9 @@ import android.net.Uri
 import android.provider.Settings
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
+import com.example.weatherapplicationmvvm.utils.NetworkResult
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -58,10 +61,75 @@ class HomeFragment : Fragment() {
 
         requestLocationPermission()
 
-        binding.textView.setOnClickListener {
-            viewModel.getWeather("Rishikesh")
-            requestLocationPermission()
+
+
+        setInitialState()
+        bindHandler()
+        bindObservers()
+
+    }
+
+    private fun bindObservers() {
+
+        viewLifecycleOwner.lifecycleScope.launch {
+
+
+            launch {
+                viewModel.getWeatherData.collect{
+
+                    when(it){
+                        is NetworkResult.Error -> {
+
+
+                        }
+                        is NetworkResult.Loading -> {
+
+                        }
+                        is NetworkResult.Success -> {
+
+                        }
+                        null -> {
+
+                        }
+                    }
+
+                }
+            }
+
+
+            launch {
+                viewModel.getWeatherLatLong.collect{
+                    when(it){
+                        is NetworkResult.Error -> {
+
+
+                        }
+                        is NetworkResult.Loading -> {
+
+                        }
+                        is NetworkResult.Success -> {
+
+                        }
+                        null -> {
+
+                        }
+                    }
+
+                }
+
+
+            }
+
         }
+
+    }
+
+    private fun bindHandler() {
+
+    }
+
+    private fun setInitialState() {
+
     }
 
     override fun onDestroyView() {
