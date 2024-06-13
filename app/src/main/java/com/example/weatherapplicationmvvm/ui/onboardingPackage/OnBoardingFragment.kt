@@ -45,9 +45,10 @@ class OnBoardingFragment : Fragment() {
         super.onDestroy()
         _binding= null
     }
-
-
-// https://api.openweathermap.org/data/2.5/weather?q=110092&appid=a8c958fe935405055cc2826bf92f1126
+// a8c958fe935405055cc2826bf92f1126   https://api.openweathermap.org/data/2.5/forecast
+    //https://pro.openweathermap.org/data/2.5/forecast/hourly?lat={lat}&lon={lon}&appid={API key}
+//   https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=26a51d79524440a6da150745aae90574
+// https://api.openweathermap.org/data/2.5/forecast/hourly?q=110092&appid=a8c958fe935405055cc2826bf92f1126
 //  https://api.openweathermap.org/data/2.5/weather?q=Rishikesh&appid=a8c958fe935405055cc2826bf92f1126
 // https://api.openweathermap.org/data/2.5/weather?lat=30.9661&lon=76.5231&appid=a8c958fe935405055cc2826bf92f1126
 

@@ -8,6 +8,7 @@ import androidx.lifecycle.VIEW_MODEL_STORE_OWNER_KEY
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weatherapplicationmvvm.models.WeatherData
+import com.example.weatherapplicationmvvm.repository.WeatherHourlyForcast
 import com.example.weatherapplicationmvvm.repository.WeatherRepository
 import com.example.weatherapplicationmvvm.utils.Constants
 import com.example.weatherapplicationmvvm.utils.LocalManager
@@ -39,6 +40,20 @@ class WeatherViewModel @Inject constructor(private val repository: WeatherReposi
     }
     val getWeatherLatLong:StateFlow<NetworkResult<WeatherData>?> get() = repository.weatherResultLatLong
 
+
+    fun getWeatherForecast(location:String){
+        viewModelScope.launch {
+            repository.getHourlyForecast(location,Constants.API_KEY)
+        }
+    }
+    val getWeatherForecast:StateFlow<NetworkResult<WeatherHourlyForcast>?> get () = repository.weatherHourlyForecast
+
+    fun getWeatherForecastLatLong(lat:String,long:String){
+        viewModelScope.launch {
+            repository.getHourlyForecastLatLong(lat,long,Constants.API_KEY)
+        }
+    }
+    val getWeatherHourlyForecastLatLong:StateFlow<NetworkResult<WeatherHourlyForcast>?> get () = repository.weatherHourlyForecastLatLong
 
 
 }
