@@ -1,7 +1,7 @@
 package com.example.weatherapplicationmvvm.api
 
 import com.example.weatherapplicationmvvm.models.WeatherData
-import com.example.weatherapplicationmvvm.repository.WeatherHourlyForcast
+import com.example.weatherapplicationmvvm.models.WeatherHourlyForcast
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

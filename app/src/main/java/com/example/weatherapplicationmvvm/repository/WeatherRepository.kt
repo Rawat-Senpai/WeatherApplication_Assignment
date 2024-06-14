@@ -3,6 +3,7 @@ package com.example.weatherapplicationmvvm.repository
 import android.util.Log
 import com.example.weatherapplicationmvvm.api.WeatherApi
 import com.example.weatherapplicationmvvm.models.WeatherData
+import com.example.weatherapplicationmvvm.models.WeatherHourlyForcast
 import com.example.weatherapplicationmvvm.utils.NetworkResult
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

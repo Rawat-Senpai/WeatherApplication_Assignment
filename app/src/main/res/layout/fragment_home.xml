@@ -47,7 +47,7 @@
                 android:layout_marginStart="10dp"
                 android:backgroundTint="@android:color/transparent"
                 android:gravity="start"
-                android:hint="Search"
+                android:hint="Search loc / area pin "
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:maxLength="15"
@@ -69,6 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchText" />
 
     <TextView
+        android:id="@+id/permissionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_medium"
@@ -81,21 +82,11 @@
         app:layout_constraintTop_toBottomOf="@+id/locProvided" />
 
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:outlineSpotShadowColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/currentWeather"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -137,11 +128,11 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/perceptions"
             tools:text="Max: 24  Min: 18" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/perceptions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -230,6 +221,18 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

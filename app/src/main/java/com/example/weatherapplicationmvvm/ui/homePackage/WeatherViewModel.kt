@@ -1,23 +1,14 @@
 package com.example.weatherapplicationmvvm.ui.homePackage
 
-import android.service.autofill.UserData
-import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.VIEW_MODEL_STORE_OWNER_KEY
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weatherapplicationmvvm.models.WeatherData
-import com.example.weatherapplicationmvvm.repository.WeatherHourlyForcast
+import com.example.weatherapplicationmvvm.models.WeatherHourlyForcast
 import com.example.weatherapplicationmvvm.repository.WeatherRepository
 import com.example.weatherapplicationmvvm.utils.Constants
-import com.example.weatherapplicationmvvm.utils.LocalManager
 import com.example.weatherapplicationmvvm.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
