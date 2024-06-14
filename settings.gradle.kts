@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Weather Application MVVM"
+rootProject.name = "Weather Application Assignment"
 include(":app")
